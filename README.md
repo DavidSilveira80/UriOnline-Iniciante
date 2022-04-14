@@ -1,2 +1,2 @@
-# UriOnline-Iniciante
-Soluções para os desafios do Uri feitos em Python
+# beecrowd-Iniciante
+Soluções para os desafios do beecrowd feitos em Python
