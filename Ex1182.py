@@ -24,4 +24,4 @@ if T == 'S':
     print(f'{soma_coluna:.1f}')
 
 elif T == 'M':
-    print(f'{soma_coluna /12:.1f}')
+    print(f'{soma_coluna / 12:.1f}')
