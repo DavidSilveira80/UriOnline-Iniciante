@@ -28,6 +28,10 @@ Exemplo de Entrada	     Exemplo de Saída
 tempo_gasto = int(input())
 velocidade_media = int(input())
 
-litros_para_a_viagem = (tempo_gasto * velocidade_media) / 12
 
-print(f'{litros_para_a_viagem:.3f}')
+def calcular_litragem(tempo_gasto, velocidade_media):
+    litros_para_a_viagem = (tempo_gasto * velocidade_media) / 12
+    return f'{litros_para_a_viagem:.3f}'
+
+
+print(calcular_litragem(tempo_gasto, velocidade_media))
