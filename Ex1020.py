@@ -39,6 +39,4 @@ resto_meses = resto_anos % 30
 
 dias = resto_meses // 1
 
-print(f'{anos} ano(s)')
-print(f'{meses} mes(es)')
-print(f'{dias} dia(s)')
+print(f'{anos} ano(s)\n{meses} mes(es)\n{dias} dia(s)')
