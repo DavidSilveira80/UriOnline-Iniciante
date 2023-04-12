@@ -22,20 +22,28 @@ Exemplo de Entrada	   Exemplo de Saída
 """
 
 
-N = int(input())
-cont = 1
+def verifica_quantidade_de_divisores(dividendo):
+    qtd_divisores = 0
+    for i in range(1, dividendo + 1):
+        if dividendo % i == 0:
+            qtd_divisores += 1
+    return qtd_divisores
 
-while cont <= N:
-    X = int(input())
-    divisores = 0
 
-    for i in range(1, X + 1):
-        if X % i == 0:
-            divisores += 1
-    
-    if divisores == 2:
-        print(f'{X} eh primo')
+def mostra_se_eh_primo(dividendo):
+    qtd_divisores = verifica_quantidade_de_divisores(dividendo)
+    if qtd_divisores == 2:
+        saida = f'{dividendo} eh primo'
     else:
-        print(f'{X} nao eh primo')
-    cont += 1
+        saida = f'{dividendo} nao eh primo'
+    return saida
+
+
+casos_de_teste = int(input())
+contador = 1
+
+while contador <= casos_de_teste:
+    dividendo = int(input())
+    print(mostra_se_eh_primo(dividendo))
+    contador += 1
     
