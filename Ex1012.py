@@ -31,22 +31,37 @@ O arquivo de saída deverá conter 5 linhas de dados. Cada linha corresponde a u
                         RETANGULO: 132.080
 """
 
-entradas_para_area = input().split(" ")
 
-A = float(entradas_para_area[0])
-B = float(entradas_para_area[1])
-C = float(entradas_para_area[2])
+def faz_atribuicoes(entradas):
+    return float(entradas[0]), float(entradas[1]), float(entradas[2])
 
-PI = 3.14159
 
-area_triangulo_retangulo = (A * C) / 2
-area_circulo = PI * (C * C)
-area_trapezio = ((A + B) * C) / 2
-area_quadrado = B * B
-area_retangulo = A * B
+def calcular_area_triangulo_retangulo(A, C):
+    return f'{(A * C) / 2:.3f}'
 
-print(f'TRIANGULO: {area_triangulo_retangulo:.3f}')
-print(f'CIRCULO: {area_circulo:.3f}')
-print(f'TRAPEZIO: {area_trapezio:.3f}')
-print(f'QUADRADO: {area_quadrado:.3f}')
-print(f'RETANGULO: {area_retangulo:.3f}')
+
+def calcular_area_circulo(C):
+    return f'{3.14159 * (C * C):.3f}'
+
+
+def calcular_area_trapezio(A, B, C):
+    return f'{((A + B) * C) / 2:.3f}'
+
+
+def calcular_area_quadrado(B):
+    return f'{B * B:.3f}'
+
+
+def calcular_area_retangulo(A, B):
+    return f'{A * B:.3f}'
+
+
+entradas_para_area = input().split(' ')
+
+A, B, C = faz_atribuicoes(entradas_para_area)
+
+print(f'TRIANGULO: ' + calcular_area_triangulo_retangulo(A, C))
+print(f'CIRCULO: ' + calcular_area_circulo(C))
+print(f'TRAPEZIO: ' + calcular_area_trapezio(A, B, C))
+print(f'QUADRADO: ' + calcular_area_quadrado(B))
+print(f'RETANGULO: ' + calcular_area_retangulo(A, B))
