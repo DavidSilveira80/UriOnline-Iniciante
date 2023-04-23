@@ -35,5 +35,5 @@ Seu programa deve produzir uma única linha contendo um único número inteiro, 
 """
 
 total_tomadas = [int(i) for i in input().split(' ')]
-tomadas_disponiveis = sum(total_tomadas) - (len(total_tomadas) - 1)
-print(tomadas_disponiveis)
+numero_máximo_de_aparelhos_conectados = sum(total_tomadas) - (len(total_tomadas) - 1)
+print(numero_máximo_de_aparelhos_conectados)
