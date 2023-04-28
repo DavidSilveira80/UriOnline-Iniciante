@@ -31,9 +31,11 @@ Steve 500               N
 
 casos_de_teste = int(input())
 
-for i in range(1, casos_de_teste + 1):
+cont = 1
+while cont <= casos_de_teste:
     entrada = input().split(' ')
     if entrada[0] == 'Thor':
         print('Y')
     else:
         print('N')
+    cont += 1

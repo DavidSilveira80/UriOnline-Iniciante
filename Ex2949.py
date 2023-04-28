@@ -50,7 +50,8 @@ def mostra_saida(anoes, elfos, humanos, magos, hobbits):
 anoes = elfos = humanos = magos = hobbits = 0
 casos_de_teste = int(input())
 
-for i in range(1, casos_de_teste + 1):
+cont = 1
+while cont <= casos_de_teste:
     entrada_nome_raca = input()
 
     raca = retorna_raca(entrada_nome_raca)
@@ -65,5 +66,6 @@ for i in range(1, casos_de_teste + 1):
         magos += 1
     elif raca == 'X':
         hobbits += 1
+    cont += 1
 
 print(mostra_saida(anoes, elfos, humanos, magos, hobbits))

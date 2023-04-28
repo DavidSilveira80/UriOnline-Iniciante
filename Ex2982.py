@@ -55,7 +55,9 @@ def calcula_valores(verba_oferecida_pelo_governo, gasto_da_universidade):
 verba_oferecida_pelo_governo = gasto_da_universidade = 0
 
 ciclos = int(input())
-for i in range(1, ciclos + 1):
+
+cont = 1
+while cont <= ciclos:
     entrada = input()
     gasto_verba = trata_entrada(entrada)
 
@@ -63,5 +65,6 @@ for i in range(1, ciclos + 1):
         gasto_da_universidade += gasto_verba[1]
     elif gasto_verba[0] == 'V':
         verba_oferecida_pelo_governo += gasto_verba[1]
+    ciclos += 1
 
 print(calcula_valores(verba_oferecida_pelo_governo, gasto_da_universidade))

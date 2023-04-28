@@ -72,7 +72,9 @@ def avalia_arvore(altura_arvore_aprovada, diametro_arvore_aprovado, galhos_arvor
 
 
 casos_de_teste = int(input())
-for teste in range(1, casos_de_teste + 1):
+
+cont = 1
+while cont <= casos_de_teste:
     entrada_altura_diametro_galhos = input().split(' ')
 
     altura, diametro, galhos = retorna_altura_diametro_galhos(entrada_altura_diametro_galhos)
@@ -87,3 +89,4 @@ for teste in range(1, casos_de_teste + 1):
         print('Sim')
     else:
         print('Nao')
+    cont += 1
