@@ -36,6 +36,8 @@ def calcula_tempo_digitacao(palavra):
 
 caso_de_testes = int(input())
 
-for i in range(1, caso_de_testes + 1):
+cont = 1
+while cont <= caso_de_testes:
     palavra = input()
     print(calcula_tempo_digitacao(palavra))
+    cont += 1

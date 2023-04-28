@@ -51,7 +51,9 @@ def calcula_qtd_presentes_por_dia(bonecos_ht, arquitetos_ht, musicos_ht, desenhi
 
 bonecos_ht = arquitetos_ht = musicos_ht = desenhistas_ht = 0
 elfos = int(input())
-for elfo in range(1, elfos + 1):
+
+cont = 1
+while cont <= elfos:
     nome_grupo_horas = input().split(' ')
     grupo_hora = retorna_grupo_hora(nome_grupo_horas)
 
@@ -63,5 +65,6 @@ for elfo in range(1, elfos + 1):
         musicos_ht += grupo_hora[1]
     elif grupo_hora[0] == 'desenhistas':
         desenhistas_ht += grupo_hora[1]
+    cont += 1
 
 print(calcula_qtd_presentes_por_dia(bonecos_ht, arquitetos_ht, musicos_ht, desenhistas_ht))

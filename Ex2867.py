@@ -29,7 +29,6 @@ Exemplo de Entrada	   Exemplo de Saída
 casos_de_teste = int(input())
 
 cont = 1
-
 while cont <= casos_de_teste:
     numeros = [int(i) for i in input().split(' ')]
     numero1, numero2 = numeros[0], numeros[1]

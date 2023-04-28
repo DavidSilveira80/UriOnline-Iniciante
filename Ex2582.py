@@ -52,6 +52,8 @@ repertorio = {'0': 'PROXYCITY', '1': 'P.Y.N.G.', '2': 'DNSUEY!', '3': 'SERVERS',
 
 rodadas = int(input())
 
-for i in range(1, rodadas + 1):
+cont = 1
+while cont <= rodadas:
     botoes = input().split(' ')
     print(tocar_vitrola(define_seletor(botoes), repertorio))
+    cont += 1

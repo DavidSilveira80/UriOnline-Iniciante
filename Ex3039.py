@@ -33,7 +33,9 @@ def retorna_genero(nome_genero):
 carrinhos = bonecas = 0
 
 criancas_que_receberam_presentes = int(input())
-for crianca in range(criancas_que_receberam_presentes):
+
+cont = 1
+while cont <= criancas_que_receberam_presentes:
     nome_genero = input().split(' ')
 
     genero = retorna_genero(nome_genero)
@@ -42,5 +44,6 @@ for crianca in range(criancas_que_receberam_presentes):
         carrinhos += 1
     elif genero == 'F':
         bonecas += 1
+    cont += 1
 
 print(f'{carrinhos} carrinhos\n{bonecas} bonecas')

@@ -23,7 +23,10 @@ Exemplo de Entrada	 Exemplo de Saída
 
 qtd_ho = int(input())
 hos = []
-for ho in range(1, qtd_ho + 1):
+
+cont = 1
+while cont <= qtd_ho:
     hos.append('Ho')
+    cont += 1
 
 print(' '.join(hos) + '!')

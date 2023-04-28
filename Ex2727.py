@@ -81,8 +81,10 @@ def decodifica(codigo, codigo_alfabeto):
 while True:
     try:
         n = int(input())
-        for i in range(1, n + 1):
+        cont = 1
+        while cont <= n:
             codigo = input()
             print(decodifica(codigo, codigo_alfabeto))
+            cont += 1
     except EOFError:
         break

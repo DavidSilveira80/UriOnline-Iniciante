@@ -24,7 +24,6 @@ Where is the book?
 casos_de_teste = int(input())
 
 cont = 1
-
 while cont <= casos_de_teste:
     pergunta = input()
     print('gzuz')
