@@ -29,9 +29,12 @@ def retorna_posicao_do_maior_numero(maior_numero, numeros):
 
 
 numeros = []
-for ciclo in range(1, 101):
+
+cont = 1
+while cont <= 100:
     numero = int(input())
     numeros.append(numero)
+    cont += 1
 
 
 maior_numero = retorna_o_maior_numero(numeros)
