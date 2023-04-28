@@ -31,7 +31,9 @@ def calcula_media_ponderada(valor1, valor2, vallor3):
 
 casos_de_teste = int(input())
 
-for caso_teste in range(1, casos_de_teste + 1):
+cont = 1
+while cont <= casos_de_teste:
     entrada = input().split(' ')
     v1, v2, v3 = converte_entrada(entrada)
     print(f'{calcula_media_ponderada(v1, v2, v3):.1f}')
+    cont += 1
