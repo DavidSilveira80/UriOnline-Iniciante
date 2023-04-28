@@ -22,7 +22,8 @@ Exemplo de Entrada	      Exemplo de Saída
 
 valores_pares = valores_impares = valores_positivos = valores_negativos = 0
 
-for ciclo in range(1, 6):
+cont = 1
+while cont <= 5:
     numero = int(input())
     if numero < 0:
         valores_negativos += 1
@@ -32,6 +33,7 @@ for ciclo in range(1, 6):
         valores_impares += 1
     if numero % 2 == 0:
         valores_pares += 1
+    cont += 1
 
 print(f'{valores_pares} valor(es) par(es)\n{valores_impares} valor(es) impar(es)\n{valores_positivos} '
       f'valor(es) positivo(s)\n{valores_negativos} valor(es) negativo(s)')
