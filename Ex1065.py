@@ -21,10 +21,12 @@ Exemplo de Entrada	   Exemplo de Saída
 
 valores_pares = 0
 
-for i in range(1, 6):
+cont = 1
+while cont <= 6:
     numero = int(input())
 
     if numero % 2 == 0:
        valores_pares += 1
+    cont += 1
 
 print(f'{valores_pares} valores pares')
