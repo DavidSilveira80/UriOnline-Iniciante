@@ -40,6 +40,8 @@ def avalia_par_impar(numero):
 
 caso_de_testes = int(input())
 
-for i in range(1, caso_de_testes + 1):
+cont = 1
+while cont <= caso_de_testes:
     numero = int(input())
     print(avalia_par_impar(numero))
+    cont += 1
