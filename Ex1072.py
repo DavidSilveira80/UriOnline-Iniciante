@@ -39,11 +39,13 @@ caso_de_teste = int(input())
 
 
 numeros_in = numeros_out = 0
-for i in range(1, caso_de_teste + 1):
+cont = 1
+while cont <= caso_de_teste:
     numero = int(input())
     if avalia_se_numeros_esta_no_intervalo(numero):
         numeros_in += 1
     else:
         numeros_out += 1
+    cont += 1
 
 print(mostrar_saida(numeros_in, numeros_out))
