@@ -25,13 +25,16 @@ Exemplo de Entrada	  Exemplo de Saída
 numeros_positivos = []
 media = qtd_numeros_positivos = 0
 
-for i in range(1, 7):
+cont = 1
+while cont <= 6:
    numero = float(input())
    if numero > 0:
       numeros_positivos.append(numero)
       qtd_numeros_positivos += 1
    else:
       continue
+   cont += 1
+
 
 print(f'{qtd_numeros_positivos} valores positivos')
 print(f'{sum(numeros_positivos) / qtd_numeros_positivos:.1f}')
