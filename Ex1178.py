@@ -32,3 +32,4 @@ while cont <= 99:
     print(f'N[{cont}] = {valor:.4f}')
     valor = valor / 2
     cont += 1
+
