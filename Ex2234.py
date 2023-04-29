@@ -34,7 +34,6 @@ Exemplos de Entrada  	Exemplos de Saída
 
 35 1000                 0.04
 
-
 """
 
 cachorroquente_consumidores = [int(i) for i in input(). split(' ')]
