@@ -30,12 +30,8 @@ Exemplos de Entrada	   Exemplos de Saída
 """
 
 
-def calcular_ICM(distancia, diametro_torre1, diametro_torre2):
-    return distancia / (diametro_torre1 + diametro_torre2)
-
-
 entradas = [int(numero) for numero in input().split(' ')]
 
 distancia, diametro_torre1, diametro_torre2 = entradas
 
-print(f'{calcular_ICM(distancia, diametro_torre1, diametro_torre2):.2f}')
+print(f'{distancia / (diametro_torre1 + diametro_torre2):.2f}')
