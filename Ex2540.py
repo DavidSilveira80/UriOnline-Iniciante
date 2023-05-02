@@ -45,19 +45,12 @@ votacao2 = '0 1 1 1 0'.split(' ')
 """
 
 
-def transforma_votos_em_inteiros(entradas_votos):
-    votos_inteiros = []
-    for voto in entradas_votos:
-        votos_inteiros.append(int(voto))
-    return votos_inteiros
-
-
 def verifica_se_impeachment(votos, numero_votantes):
     return sum(votos) >= ((numero_votantes * 2) / 3)
 
 
 def mostra_resultado(votos, votantes):
-    if verifica_se_impeachment(transforma_votos_em_inteiros(votos), votantes):
+    if verifica_se_impeachment(votos, votantes):
         resultado = 'impeachment'
     else:
         resultado = 'acusacao arquivada'
@@ -67,7 +60,7 @@ def mostra_resultado(votos, votantes):
 while True:
     try:
         votantes = int(input())
-        votos = input().split(' ')
+        votos = [int(numero) for numero in input().split(' ')]
 
         print(mostra_resultado(votos, votantes))
 
