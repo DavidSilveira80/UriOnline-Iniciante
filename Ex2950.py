@@ -30,17 +30,12 @@ Exemplos de Entrada	   Exemplos de Saída
 """
 
 
-def converte_entradas_para_inteiro(distancia_diametros):
-    entradas = distancia_diametros.split(' ')
-    return int(entradas[0]), int(entradas[1]), int(entradas[2])
-
-
 def calcular_ICM(distancia, diametro_torre1, diametro_torre2):
     return distancia / (diametro_torre1 + diametro_torre2)
 
 
-entradas = input()
+entradas = [int(numero) for numero in input().split(' ')]
 
-distancia, diametro_torre1, diametro_torre2 = converte_entradas_para_inteiro(entradas)
+distancia, diametro_torre1, diametro_torre2 = entradas
 
 print(f'{calcular_ICM(distancia, diametro_torre1, diametro_torre2):.2f}')
