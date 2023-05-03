@@ -30,13 +30,9 @@ Exemplos de Entrada	     Exemplos de Saída
 
 """
 
+saida = lambda: 'Farei hoje!' if(sum([int(x) for x in input().split(' ')]) <= minutos_para_encerrar) else 'Deixa para amanha!'
 
-minutos_para_encerrar_expediente = int(input())
-minutos_para_dois_presentes = [int(x) for x in input().split(' ')]
+minutos_para_encerrar = int(input())
 
-tempo_para_fazer_presentes = minutos_para_dois_presentes[0] + minutos_para_dois_presentes[1]
+print(saida())
 
-if tempo_para_fazer_presentes <= minutos_para_encerrar_expediente:
-    print('Farei hoje!')
-else:
-    print('Deixa para amanha!')
