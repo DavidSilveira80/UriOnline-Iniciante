@@ -20,23 +20,12 @@ nenhuma                  portugues
 as duas                  caiu
 """
 
-
-def mostra_idioma(patas_levantadas):
-    if patas_levantadas == 'esquerda':
-        idioma = 'ingles'
-    elif patas_levantadas == 'direita':
-        idioma = 'frances'
-    elif patas_levantadas == 'nenhuma':
-        idioma = 'portugues'
-    elif patas_levantadas == 'as duas':
-        idioma = 'caiu'
-
-    return idioma
+idioma = {'esquerda': 'ingles', 'direita': 'frances', 'nenhuma': 'portugues', 'as duas': 'caiu'}
 
 
 while True:
     try:
         patas_levantadas = input()
-        print(mostra_idioma(patas_levantadas))
+        print(idioma[patas_levantadas])
     except EOFError:
         break
