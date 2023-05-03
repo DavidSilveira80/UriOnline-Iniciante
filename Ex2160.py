@@ -24,9 +24,5 @@ Paula Miguel Rafael Joaquim Jose
 
 """
 
-texto = input()
-
-if len(texto) > 80:
-    print('NO')
-else:
-    print('YES')
+saida = lambda: 'NO' if (len(input()) > 80) else 'YES'
+print(saida())
