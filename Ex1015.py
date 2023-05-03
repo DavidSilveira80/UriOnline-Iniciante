@@ -14,11 +14,8 @@ Calcule e imprima o valor da distância segundo a fórmula fornecida, com 4 casa
 """
 from math import sqrt, pow
 
-eixo_X_Y_1 = input().split(" ")
-eixo_X_Y_2 = input().split(" ")
-
-x1, y1 = float(eixo_X_Y_1[0]), float(eixo_X_Y_1[1])
-x2, y2 = float(eixo_X_Y_2[0]), float(eixo_X_Y_2[1])
+x1, y1 = [float(numero) for numero in input().split(' ')]
+x2, y2 = [float(valor) for valor in input().split(' ')]
 
 distancia = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
 

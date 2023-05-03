@@ -24,8 +24,7 @@ Exemplo de Entrada	    Exemplo de Saída
 
 
 def informando_valores():
-    valores = input().split(' ')
-    return int(valores[0]), int(valores[1])
+    return [int(x) for x in input().split(' ')]
 
 
 def informa_se_divisao_eh_possivel(x, y):

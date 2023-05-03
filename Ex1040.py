@@ -43,10 +43,6 @@ Exemplo de Entrada	     Exemplo de Saída
 """
 
 
-def atribuir_notas(entrada_valores):
-    return float(entrada_valores[0]), float(entrada_valores[1]), float(entrada_valores[2]), float(entrada_valores[3])
-
-
 def calcular_media(nota1, nota2, nota3, nota4):
     return ((nota1 * 2) + (nota2 * 3) + (nota3 * 4) + (nota4 * 1)) / (2 + 3 + 4 + 1)
 
@@ -64,8 +60,7 @@ def mostrar_resultado_aprovado_exame(media):
     return resultado
 
 
-notas = input().split(' ')
-nota1, nota2, nota3, nota4 = atribuir_notas(notas)
+nota1, nota2, nota3, nota4 = [float(x) for x in input().split(' ')]
 media = calcular_media(nota1, nota2, nota3, nota4)
 
 print(f'Media: {media:.1f}')

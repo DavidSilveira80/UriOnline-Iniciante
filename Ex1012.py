@@ -32,10 +32,6 @@ O arquivo de saída deverá conter 5 linhas de dados. Cada linha corresponde a u
 """
 
 
-def faz_atribuicoes(entradas):
-    return float(entradas[0]), float(entradas[1]), float(entradas[2])
-
-
 def calcular_area_triangulo_retangulo(A, C):
     return f'{(A * C) / 2:.3f}'
 
@@ -56,9 +52,7 @@ def calcular_area_retangulo(A, B):
     return f'{A * B:.3f}'
 
 
-entradas_para_area = input().split(' ')
-
-A, B, C = faz_atribuicoes(entradas_para_area)
+A, B, C = [float(x) for x in input().split(' ')]
 
 print(f'TRIANGULO: ' + calcular_area_triangulo_retangulo(A, C))
 print(f'CIRCULO: ' + calcular_area_circulo(C))

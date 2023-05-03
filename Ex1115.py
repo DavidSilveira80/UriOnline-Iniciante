@@ -22,8 +22,7 @@ Exemplo de Entrada	     Exemplo de Saída
 
 
 while True:
-    coordenadas = input().split()
-    X, Y = int(coordenadas[0]), int(coordenadas[1])
+    X, Y = [int(x) for x in input().split(' ')]
 
     if X > 0 and Y > 0:
         print('primeiro')

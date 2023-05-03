@@ -31,17 +31,10 @@ Exemplos de Entrada	     Exemplos de Saída
 """
 
 
-def retorna_minutos_para_fazer_dois_presentes(minutos_para_fazer_dois_presentes):
-    minuto_presente1, minuto_presente2 = int(minutos_para_fazer_dois_presentes[0]), \
-                                         int(minutos_para_fazer_dois_presentes[1])
-
-    return minuto_presente1 + minuto_presente2
-
-
 minutos_para_encerrar_expediente = int(input())
-minutos_para_fazer_dois_presentes = input().split(' ')
+minutos_para_dois_presentes = [int(x) for x in input().split(' ')]
 
-tempo_para_fazer_presentes = retorna_minutos_para_fazer_dois_presentes(minutos_para_fazer_dois_presentes)
+tempo_para_fazer_presentes = minutos_para_dois_presentes[0] + minutos_para_dois_presentes[1]
 
 if tempo_para_fazer_presentes <= minutos_para_encerrar_expediente:
     print('Farei hoje!')

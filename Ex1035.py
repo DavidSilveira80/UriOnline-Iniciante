@@ -17,9 +17,8 @@ Exemplo de Entrada	      Exemplo de Saída
 
 """
 
-valores_entrada = input().split(' ')
 
-A, B, C, D = int(valores_entrada[0]), int(valores_entrada[1]), int(valores_entrada[2]), int(valores_entrada[3])
+A, B, C, D = [int(x) for x in input().split(' ')]
 
 if(B > C and D > A and ((C + D) > (A + B)) and C >= 0 and D >= 0 and A % 2 == 0):
     print('Valores aceitos')

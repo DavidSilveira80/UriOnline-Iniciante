@@ -57,10 +57,6 @@ Exemplos de Entrada	  Exemplos de Saída
 """
 
 
-def converte_dias_para_inteiro(dias):
-    return int(dias[0]), int(dias[1]), int(dias[2])
-
-
 def retorna_animo(dia1, dia2, dia3):
     if dia2 < dia1 and dia3 >= dia2:
         animo = ':)'
@@ -82,8 +78,6 @@ def retorna_animo(dia1, dia2, dia3):
     return animo
 
 
-dias = input().split(' ')
-
-dia1, dia2, dia3 = converte_dias_para_inteiro(dias)
+dia1, dia2, dia3 = [int(x) for x in input().split(' ')]
 
 print(retorna_animo(dia1, dia2, dia3))

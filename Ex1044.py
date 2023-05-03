@@ -24,8 +24,6 @@ def mostra_se_sao_multiplos(A, B):
         print('Nao sao Multiplos')
 
 
-valores = input().split(' ')
-
-A, B = int(valores[0]), int(valores[1])
+A, B = [int(x) for x in input().split(' ')]
 
 mostra_se_sao_multiplos(A, B)

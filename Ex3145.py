@@ -33,8 +33,7 @@ Exemplos de Entrada	     Exemplos de Saída
 def retorna_quantidade_de_dias_de_viagem(anoes, distancia):
     return distancia / (anoes + 2)
 
-entrada = input().split(' ')
 
-anoes, distancia = int(entrada[0]), int(entrada[1])
+anoes, distancia = [int(x) for x in input().split(' ')]
 
 print(f'{retorna_quantidade_de_dias_de_viagem(anoes, distancia):.2f}')

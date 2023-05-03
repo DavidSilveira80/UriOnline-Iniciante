@@ -21,10 +21,6 @@ Exemplo de Entrada	         Exemplo de Saída
 """
 
 
-def converte_entrada(entrada):
-    return float(entrada[0]), float(entrada[1]), float(entrada[2])
-
-
 def calcula_media_ponderada(valor1, valor2, vallor3):
     return ((valor1 * 2) + (valor2 * 3) + (vallor3 * 5)) / (2 + 3 + 5)
 
@@ -33,7 +29,6 @@ casos_de_teste = int(input())
 
 cont = 1
 while cont <= casos_de_teste:
-    entrada = input().split(' ')
-    v1, v2, v3 = converte_entrada(entrada)
+    v1, v2, v3 = [float(x) for x in input().split(' ')]
     print(f'{calcula_media_ponderada(v1, v2, v3):.1f}')
     cont += 1

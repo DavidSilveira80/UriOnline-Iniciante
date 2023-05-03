@@ -16,8 +16,5 @@ Exemplos de Entrada	      Exemplos de Saída
 
 """
 
-entrada_numeros = input().split(" ")
-
-numeros = [int(entrada_numeros[0]), int(entrada_numeros[1]), int(entrada_numeros[2])]
-
+numeros = [int(x) for x in input().split(' ')]
 print(f'{max(numeros)} eh o maior')

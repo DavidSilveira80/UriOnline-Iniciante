@@ -21,8 +21,7 @@ Exemplo de Entrada	   Exemplo de Saída
 
 
 def informando_valores():
-    valores = input().split(' ')
-    return int(valores[0]), int(valores[1])
+    return [int(x) for x in input().split(' ')]
 
 
 def gera_sequencia(N, M):

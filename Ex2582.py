@@ -38,7 +38,7 @@ Exemplo de Entrada	    Exemplo de Saída
 
 
 def define_seletor(botoes):
-    botao1, botao2 = int(botoes[0]), int(botoes[1])
+    botao1, botao2 = botoes
     return str(botao1 + botao2)
 
 
@@ -54,6 +54,6 @@ rodadas = int(input())
 
 cont = 1
 while cont <= rodadas:
-    botoes = input().split(' ')
+    botoes = [int(x) for x in input().split(' ')]
     print(tocar_vitrola(define_seletor(botoes), repertorio))
     cont += 1

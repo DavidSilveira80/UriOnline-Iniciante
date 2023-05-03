@@ -39,11 +39,6 @@ Exemplos de Entrada	   Exemplos de Saída
 """
 
 
-def retorna_exercitos(exercitos):
-    return int(exercitos[0]), int(exercitos[1]), int(exercitos[2]), int(exercitos[3]), int(exercitos[4]), \
-           int(exercitos[5])
-
-
 def verifica_se_terra_media_esta_salva(humanos, elfos, anoes, orcs, wargs, aguias):
     lado_do_bem = humanos + elfos + anoes + aguias
     lado_do_mal = orcs + wargs
@@ -54,8 +49,6 @@ def verifica_se_terra_media_esta_salva(humanos, elfos, anoes, orcs, wargs, aguia
     return terra_media
 
 
-exercitos = input().split(' ')
-
-humanos, elfos, anoes, orcs, wargs, aguias = retorna_exercitos(exercitos)
+humanos, elfos, anoes, orcs, wargs, aguias = [int(x) for x in input().split(' ')]
 
 print(verifica_se_terra_media_esta_salva(humanos, elfos, anoes, orcs, wargs, aguias))

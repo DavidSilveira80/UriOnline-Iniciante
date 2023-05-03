@@ -33,11 +33,6 @@ Exemplo de Entrada	   Exemplo de Saída
 """
 
 
-def retorna_altura_diametro_galhos(entrada_altura_diametro_galhos):
-    return int(entrada_altura_diametro_galhos[0]), int(entrada_altura_diametro_galhos[1]), \
-           int(entrada_altura_diametro_galhos[2])
-
-
 def avalia_altura(altura):
     altura_arvore_aprovada = False
     if altura >= 200 and altura <= 300:
@@ -75,9 +70,8 @@ casos_de_teste = int(input())
 
 cont = 1
 while cont <= casos_de_teste:
-    entrada_altura_diametro_galhos = input().split(' ')
 
-    altura, diametro, galhos = retorna_altura_diametro_galhos(entrada_altura_diametro_galhos)
+    altura, diametro, galhos = [int(x) for x in input().split(' ')]
 
     altura_arvore_aprovada, diametro_arvore_aprovado, galhos_arvore_aprovados = avalia_altura(altura), \
                                                                                 avalia_diametro(diametro), \
