@@ -34,37 +34,26 @@ Exemplo de Entrada	   Exemplo de Saída
 
 
 def avalia_altura(altura):
-    altura_arvore_aprovada = False
-    if altura >= 200 and altura <= 300:
-        altura_arvore_aprovada = True
-
-    return altura_arvore_aprovada
+    arvore_aprovada = lambda altura: True if(200 <= altura <= 300) else False
+    return arvore_aprovada(altura)
 
 
 def avalia_diametro(diametro):
-    diametro_arvore_aprovado = False
-    if diametro >= 50:
-        diametro_arvore_aprovado = True
-
-    return diametro_arvore_aprovado
+    diametro_aprovado = lambda diametro: True if (diametro >= 50) else False
+    return diametro_aprovado(diametro)
 
 
 def avalia_galhos(galhos):
-    galhos_arvore_aprovados = False
-    if galhos >= 150:
-        galhos_arvore_aprovados = True
-
-    return galhos_arvore_aprovados
+    galhos_aprovados = lambda galhos: True if(galhos >= 50) else False
+    return galhos_aprovados(galhos)
 
 
-def avalia_arvore(altura_arvore_aprovada, diametro_arvore_aprovado, galhos_arvore_aprovados):
+def avalia_arvore(altura, diametro, galhos):
+    arvore_aprovada = lambda altura, diametro, galhos: True if(altura and diametro and galhos) else False
+    return arvore_aprovada(altura, diametro, galhos)
 
-    if altura_arvore_aprovada and diametro_arvore_aprovado and galhos_arvore_aprovados:
-        arvore_aprovada = True
-    else:
-        arvore_aprovada = False
-    return arvore_aprovada
 
+saida = lambda arvore_aprova: 'Sim' if arvore_aprovada else 'Nao'
 
 casos_de_teste = int(input())
 
@@ -73,14 +62,11 @@ while cont <= casos_de_teste:
 
     altura, diametro, galhos = [int(x) for x in input().split(' ')]
 
-    altura_arvore_aprovada, diametro_arvore_aprovado, galhos_arvore_aprovados = avalia_altura(altura), \
+    altura_aprovada, diametro_aprovado, galhos_aprovados = avalia_altura(altura), \
                                                                                 avalia_diametro(diametro), \
                                                                                 avalia_galhos(galhos)
 
-    arvore_aprovada = avalia_arvore(altura_arvore_aprovada, diametro_arvore_aprovado, galhos_arvore_aprovados)
+    arvore_aprovada = avalia_arvore(altura_aprovada, diametro_aprovado, galhos_aprovados)
 
-    if arvore_aprovada:
-        print('Sim')
-    else:
-        print('Nao')
+    print(saida(arvore_aprovada))
     cont += 1
