@@ -16,13 +16,4 @@ Exemplo de Entrada	    Exemplo de Saída
 
 """
 
-
-def concatenar_frase(letra_a):
-    return 'Feliz nat'+letra_a+'l!'
-
-
-numero = int(input())
-
-letra_a = 'a' * numero
-
-print(concatenar_frase(letra_a))
+print(f'feliz nat{"a" * int(input())}l!')
