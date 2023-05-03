@@ -32,30 +32,27 @@ O arquivo de saída deverá conter 5 linhas de dados. Cada linha corresponde a u
 """
 
 
-def calcular_area_triangulo_retangulo(A, C):
-    return f'{(A * C) / 2:.3f}'
+def calcular_triangulo(a, c):
+    return f'{(a * c) / 2:.3f}'
 
 
-def calcular_area_circulo(C):
-    return f'{3.14159 * (C * C):.3f}'
+def calcular_circulo(c):
+    return f'{3.14159 * (c * c):.3f}'
 
 
-def calcular_area_trapezio(A, B, C):
-    return f'{((A + B) * C) / 2:.3f}'
+def calcular_trapezio(a, b, c):
+    return f'{((a + b) * c) / 2:.3f}'
 
 
-def calcular_area_quadrado(B):
-    return f'{B * B:.3f}'
+def calcular_quadrado(b):
+    return f'{b * b:.3f}'
 
 
-def calcular_area_retangulo(A, B):
-    return f'{A * B:.3f}'
+def calcular_retangulo(a, b):
+    return f'{a * b:.3f}'
 
 
 A, B, C = [float(x) for x in input().split(' ')]
 
-print(f'TRIANGULO: ' + calcular_area_triangulo_retangulo(A, C))
-print(f'CIRCULO: ' + calcular_area_circulo(C))
-print(f'TRAPEZIO: ' + calcular_area_trapezio(A, B, C))
-print(f'QUADRADO: ' + calcular_area_quadrado(B))
-print(f'RETANGULO: ' + calcular_area_retangulo(A, B))
+print(f'TRIANGULO: {calcular_triangulo(A, C)}\nCIRCULO: {calcular_circulo(C)}\nTRAPEZIO: {calcular_trapezio(A, B, C)}'
+      f'\nQUADRADO: {calcular_quadrado(B)}\nRETANGULO: {calcular_retangulo(A, B)}')
