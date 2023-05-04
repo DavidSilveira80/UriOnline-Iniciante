@@ -44,7 +44,7 @@ def avalia_diametro(diametro):
 
 
 def avalia_galhos(galhos):
-    galhos_aprovados = lambda galhos: True if(galhos >= 50) else False
+    galhos_aprovados = lambda galhos: True if(galhos >= 150) else False
     return galhos_aprovados(galhos)
 
 
