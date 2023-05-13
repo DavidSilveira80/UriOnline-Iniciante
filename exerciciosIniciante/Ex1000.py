@@ -4,5 +4,3 @@ def mensagem(msg):
 
 
 print(mensagem('Hello World!'))
-
-
