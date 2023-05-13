@@ -22,3 +22,8 @@ jobs:
         if: always()
         run: |
            pip install pytest
+      - name: Correção do desafio Ex1000.py Hello World!
+        if: always()
+        run: |
+          pytest -v tests_iniciante/test_ex1000.py
+        

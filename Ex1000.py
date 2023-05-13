@@ -1,1 +1,8 @@
-print('Hello World!')
+
+def mensagem(msg):
+    return msg
+
+
+print(mensagem('Hello World!'))
+
+
