@@ -24,11 +24,19 @@ Exemplos de Entrada     Exemplos de Saída
 
 """
 
-PI = 3.14159
 
-raio = float(input())
+def retorna_com_quatro_casas(numero_ponto_fluatuante: float) -> str:
+    return f'{numero_ponto_fluatuante:.4f}'
 
-area = PI * (raio * raio)
 
-print(f'A={area:.4f}')
+def area(raio: float) -> str:
+    area_da_circunferencia = 3.14159 * (raio * raio)
+    return retorna_com_quatro_casas(area_da_circunferencia)
 
+
+def retorna_saida(area_formatada: str) -> str:
+    return f'A={area_formatada}'
+
+
+if __name__ == '__main__':
+    print(retorna_saida(area(2.0)))
